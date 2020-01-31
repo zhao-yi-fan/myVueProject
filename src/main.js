@@ -3,21 +3,23 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import store from './store'
+
 // Element-ui
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
-import VueAwesomeSwiper from 'vue-awesome-swiper'
+
+
 import VueCropper from 'vue-cropper'
 // require styles 轮播图插件
-import 'swiper/dist/css/swiper.css'
 // 预览
 import VuePreview from 'vue-preview'
 
 // 引入reset.css
 import '@/assets/styles/reset.css'
 
-Vue.use(ElementUI)
-Vue.use(VueAwesomeSwiper)
+
+Vue.use(ElementUI) // 调用 install方法 干了两件事 注册组件Vue.component 在原型中写入属性Vue.prototype.xxx
 Vue.use(VueCropper)
 Vue.use(VuePreview)
 Vue.config.productionTip = false
@@ -26,6 +28,6 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
-  components: { App },
-  template: '<App/>'
+  store,
+  render: h => h(App)
 })

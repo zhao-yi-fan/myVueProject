@@ -21,8 +21,7 @@ export default {
 </script>
 <style lang="css" scoped>
 .footer {
-  width: 100%;
-  height: 200px;
+  height: 100%;
   background: #ccc;
 }
 </style>

@@ -59,7 +59,7 @@ export default {
   background: #ccc;
 }
 .nav-container {
-  height: 127px;
+  height: 100%;
   width: 80%;
   margin: 0 10%;
   display: flex;
